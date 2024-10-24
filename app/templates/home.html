@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Spanish Trail BC | Gautier, MS{% endblock %}
+{% block content%}
+
+    <!-- Hero Section -->
+    <section
+        class="hero text-center text-white d-flex flex-column justify-content-center align-items-center order-first order-lg-0">
+        <div class="container">
+            <h2 class="subtitle">Welcome to</h2>
+            <h1 class="title">Spanish Trail Baptist Church</h1>
+            <a href="offering.html" class="btn btn-primary btn-lg mt-3">Online Giving</a>
+            <p class="fs-4 mt-5">Sunday School: 9:30 AM</p>
+            <p class="fs-4"><strong>Sunday Morning Worship: 10:30 AM</strong></p>
+            <p class="fs-4">Sunday Night Service: 5:30 PM</p>
+            <p class="fs-4">Wednesday Bible Study: 6:00 PM</p>
+        </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section id="services" class="services py-5 bg-light">
+        <div class="container text-center">
+            <h2>Our Services</h2>
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="card shadow-sm h-100">
+                        <img src="{% static 'images/sunday-baptist-worship.jpg' %}" class="card-img-top" alt="Sunday Worship">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Sunday Worship</h5>
+                            <p class="card-text flex-grow-1">Join us every Sunday Morning and Afternoon for an inspiring worship service</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="card shadow-sm h-100">
+                        <img src="{% static 'images/bible-study.jpg' %}" class="card-img-top" alt="Bible Study">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Bible Study</h5>
+                            <p class="card-text flex-grow-1">Deepen your understanding of Scripture in our weekly Bible study sessions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <img src="{% static 'images/children-study.jpg' %}" class="card-img-top" alt="children">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Children's Ministry</h5>
+                            <p class="card-text">Children of all ages can enjoy a safe and fun environment where they can learn about the stories God has shared with us.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map" id="map">
+        <div class="container text-center">
+            <h2>Visit Us</h2>
+            <p>Find us at 2400 Old Spanish Trail, Gautier, MS. We look forward to seeing you!</p>
+            <div class="mt-5">
+                <div class="d-flex justify-content-center">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.1234567890123!2d-88.12345678901234!3d30.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1234567890abcdef%3A0x1234567890abcdef!2s2400%20Old%20Spanish%20Trail%2C%20Gautier%2C%20MS!5e0!3m2!1sen!2sus!4v1611234567890!5m2!1sen!2sus"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+    </section>
+
+{% endblock content%}
