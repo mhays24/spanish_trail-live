@@ -12,11 +12,6 @@ def home(request):
 def beliefs(request):
     return render(request, "beliefs.html")
 
-
-def facebook(request):
-    return render(request, "facebook.html")
-
-
 def im_new(request):
     return render(request, "im_new.html")
 
@@ -25,8 +20,8 @@ def ministries(request):
     return render(request, "ministries.html")
 
 
-def offering(request):
-    return render(request, "offering.html")
+def online_giving(request):
+    return render(request, "online_giving.html")
 
 
 def staff(request):
