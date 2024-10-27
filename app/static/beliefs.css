@@ -40,3 +40,18 @@ body {
     color: #888;
     margin-top: 5px;
 }
+
+.belief_header {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 60px;
+    padding-top: 200px;
+}
+
+.areal {
+    font-family: 'Arial', sans-serif;
+}
+
+.georgia {
+    font-family: 'Georgia', serif;
+}
+
