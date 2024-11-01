@@ -103,10 +103,8 @@ body {
 /* End of Hero section */
 
 /* Start of services section */
-.no-underline {
-    text-decoration: none;
-    color: black;
-}
+
+/*ministries section is located in the ministries.css file due to rendering errors*/
 
 /* End of services section */
 

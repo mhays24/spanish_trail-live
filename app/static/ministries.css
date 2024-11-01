@@ -1,0 +1,126 @@
+/* section from ministries on index.html */
+.card-small {
+    width: 90%;
+    margin: 10px auto;
+    padding: 0;
+    border: none;
+}
+
+.card {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card-img-top {
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-small {
+    height: 250px;
+    /* Set a fixed height */
+    object-fit: cover;
+    /* Ensure the image covers the entire area */
+    width: 100%;
+    /* Ensure the image fills the card width */
+    margin: 0;
+    /* Remove margin */
+    padding: 0;
+    /* Remove padding */
+}
+
+/* End of section from ministries on index.html */
+
+/* Start of ministries.html */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Section Container */
+.section {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    /* Start hidden for animation */
+}
+
+/* Section Image */
+.section-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Overlay Text */
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Description Text */
+.description {
+    font-size: 18px;
+    color: #333;
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+/* Animation Keyframes */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Applying Animations to Sections */
+.section-left {
+    animation: slideInLeft 1s ease forwards;
+}
+
+.section-right {
+    animation: slideInRight 1s ease forwards;
+    animation-delay: 0.5s;
+    /* Delay to stagger animations */
+}

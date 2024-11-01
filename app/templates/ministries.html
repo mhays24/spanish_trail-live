@@ -5,20 +5,20 @@
 <link rel="stylesheet" href="{% static "styles.css" %}" />
 <link rel="stylesheet" href="{% static "ministries.css" %}" />
 
-<div class="card shadow-lg">
-    <div class="card-body">
-        <div class="construction-icon mb-4">
-            🚧
-        </div>
-        <h1 class="card-title">This Page is Under Construction</h1>
-        <p class="card-text">We are working hard to get this page up and running. Check back soon!</p>
-        
-        <div class="progress my-4">
-            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar"></div>
-        </div>
+<section>
+  <!-- Adult Ministry Section -->
+  <div class="section section-left">
+    <img src="{% static 'images/bible.jpg' %}" alt="Adult Ministry Image" class="section-image">
+    <div class="overlay">Adult Ministry</div>
+  </div>
+  <p class="description">Adults in fellowship ministering to each other as God directs our paths.</p>
 
-        <button class="btn btn-primary" onclick="window.history.back()">Go Back</button>
-    </div>
-</div>
+  <!-- Children's Ministry Section -->
+  <div class="section section-right">
+    <img src="{% static 'images/bible.jpg' %}" alt="Children's Ministry Image" class="section-image">
+    <div class="overlay">Children's Ministry</div>
+  </div>
+  <p class="description">Children of all ages have a fun safe place to learn about the stories God has given us.</p>
+</section>
 
 {% endblock %}

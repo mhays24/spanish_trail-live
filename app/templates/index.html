@@ -3,6 +3,8 @@
 {% block title %}Spanish Trail BC | Gautier, MS{% endblock %}
 {% block content%}
 <link rel="stylesheet" href="{% static "styles.css" %}" />
+<link rel="stylesheet" href="{% static "ministries.css" %}" />
+
 
     <!-- Hero Section -->
     <section
@@ -24,35 +26,44 @@
         <div class="container text-center">
             <h2>Our Services</h2>
             <div class="row mt-4">
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <div class="card shadow-sm h-100">
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm h-100 position-relative card-small">
                         <a href="{% url 'ministries' %}" class="no-underline">
-                            <img src="{% static 'images/sunday-baptist-worship.jpg' %}" class="card-img-top" alt="Sunday Worship">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Sunday Worship</h5>
-                                <p class="card-text flex-grow-1">Join us every Sunday Morning and Afternoon for an inspiring worship service</p>
+                            <img src="{% static 'images/sunday-baptist-worship.jpg' %}" class="card-img-top img-small" alt="Sunday Worship" style="filter: brightness(80%);">
+                            <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                                <h2 class="card-title text-white title-large">Sunday Worship</h2>
                             </div>
                         </a>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <div class="card shadow-sm h-100">
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm h-100 position-relative card-small">
                         <a href="{% url 'ministries' %}" class="no-underline">
-                            <img src="{% static 'images/bible-study.jpg' %}" class="card-img-top" alt="Bible Study">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Bible Study</h5>
-                                <p class="card-text flex-grow-1">Deepen your understanding of Scripture in our weekly Bible study sessions.</p>
+                            <img src="{% static 'images/bible-study.jpg' %}" class="card-img-top img-small" alt="Bible Study" style="filter: brightness(80%);">
+                            <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                                <h2 class="card-title text-white title-large">Bible Study</h2>
                             </div>
                         </a>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card shadow-sm h-100">
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm h-100 position-relative card-small">
                         <a href="{% url 'ministries' %}" class="no-underline">
-                            <img src="{% static 'images/children-study.jpg' %}" class="card-img-top" alt="children">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Children's Ministry</h5>
-                                <p class="card-text">Children of all ages can enjoy a safe and fun environment where they can learn about the stories God has shared with us.</p>
+                            <img src="{% static 'images/bible.jpg' %}" class="card-img-top img-small" alt="Bible Challenge" style="filter: brightness(80%);">
+                            <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                                <h2 class="card-title text-white title-large">Bible Challenge</h2>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm h-100 position-relative card-small">
+                        <a href="{% url 'ministries' %}" class="no-underline">
+                            <img src="{% static 'images/lady-aux.jpg' %}" class="card-img-top img-small" alt="children" style="filter: brightness(80%);">
+                            <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                                <h2 class="card-title text-white title-large">Lady's Auxiliary</h2>
                             </div>
                         </a>
                     </div>
@@ -60,6 +71,9 @@
             </div>
         </div>
     </section>
+
+    
+    
 
 
     <!-- announcements Section -->
