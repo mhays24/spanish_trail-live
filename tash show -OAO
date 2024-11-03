@@ -1,0 +1,82 @@
+[1mdiff --git a/app/static/ministries.css b/app/static/ministries.css[m
+[1mindex 9362766..f6391cd 100644[m
+[1m--- a/app/static/ministries.css[m
+[1m+++ b/app/static/ministries.css[m
+[36m@@ -50,7 +50,7 @@[m [mbody {[m
+ }[m
+ [m
+ /* Section Container */[m
+[31m-.section {[m
+[32m+[m[32m.ministries-section .section {[m
+     position: relative;[m
+     width: 100%;[m
+     max-width: 600px;[m
+[36m@@ -58,19 +58,19 @@[m [mbody {[m
+     overflow: hidden;[m
+     border-radius: 8px;[m
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);[m
+[31m-    opacity: 0;[m
+[31m-    /* Start hidden for animation */[m
+[32m+[m[32m    opacity: 1; /* Ensure the section is visible */[m
+[32m+[m[32m    border: 2px solid red; /* Debugging style */[m
+ }[m
+ [m
+ /* Section Image */[m
+[31m-.section-image {[m
+[32m+[m[32m.ministries-section .section-image {[m
+     width: 100%;[m
+     height: auto;[m
+     display: block;[m
+ }[m
+ [m
+ /* Overlay Text */[m
+[31m-.overlay {[m
+[32m+[m[32m.ministries-section .overlay {[m
+     position: absolute;[m
+     top: 50%;[m
+     left: 50%;[m
+[36m@@ -82,7 +82,7 @@[m [mbody {[m
+ }[m
+ [m
+ /* Description Text */[m
+[31m-.description {[m
+[32m+[m[32m.ministries-section .description {[m
+     font-size: 18px;[m
+     color: #333;[m
+     margin: 20px 0;[m
+[36m@@ -115,12 +115,19 @@[m [mbody {[m
+ }[m
+ [m
+ /* Applying Animations to Sections */[m
+[31m-.section-left {[m
+[32m+[m[32m.ministries-section .section-left {[m
+     animation: slideInLeft 1s ease forwards;[m
+[32m+[m[32m    border: 2px solid blue; /* Debugging style */[m
+ }[m
+ [m
+[31m-.section-right {[m
+[32m+[m[32m.ministries-section .section-right {[m
+     animation: slideInRight 1s ease forwards;[m
+     animation-delay: 0.5s;[m
+     /* Delay to stagger animations */[m
+[32m+[m[32m    border: 2px solid green; /* Debugging style */[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m/* Test Style */[m
+[32m+[m[32mbody {[m
+[32m+[m[32m    background-color: yellow !important;[m
+ }[m
+\ No newline at end of file[m
+[1mdiff --git a/app/templates/ministries.html b/app/templates/ministries.html[m
+[1mindex 8e3174d..e066875 100644[m
+[1m--- a/app/templates/ministries.html[m
+[1m+++ b/app/templates/ministries.html[m
+[36m@@ -5,7 +5,7 @@[m
+ <link rel="stylesheet" href="{% static "styles.css" %}" />[m
+ <link rel="stylesheet" href="{% static "ministries.css" %}" />[m
+ [m
+[31m-<section>[m
+[32m+[m[32m<section class="ministries-section">[m
+   <!-- Adult Ministry Section -->[m
+   <div class="section section-left">[m
+     <img src="{% static 'images/bible.jpg' %}" alt="Adult Ministry Image" class="section-image">[m

@@ -1,126 +1,105 @@
-/* section from ministries on index.html */
-.card-small {
-    width: 90%;
-    margin: 10px auto;
-    padding: 0;
-    border: none;
-}
-
-.card {
-    border: none;
-    padding: 0;
-    margin: 0;
-}
-
-.card-img-top {
-    border-radius: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.img-small {
-    height: 250px;
-    /* Set a fixed height */
-    object-fit: cover;
-    /* Ensure the image covers the entire area */
-    width: 100%;
-    /* Ensure the image fills the card width */
-    margin: 0;
-    /* Remove margin */
-    padding: 0;
-    /* Remove padding */
-}
-
-/* End of section from ministries on index.html */
-
-/* Start of ministries.html */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f3f3f3;
-    color: #333;
-    text-align: center;
-    padding: 20px;
+  background: url('images/cross.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.bottom-padding {
+  padding-bottom: 100px;
+}
+
+.ministries-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 60pt;
+  padding-top: 245px;
+  font-weight: 500;
 }
 
 /* Section Container */
 .section {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 50px auto;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    /* Start hidden for animation */
+  position: relative;
+  width: 95%;
+  max-width: 1200px;
+  height: 350px;
+  /* Increased height for a taller rectangle */
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  /* Initially hidden for animation */
+  transform: translateX(0);
+  /* Reset any transformations */
 }
 
 /* Section Image */
 .section-image {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Overlay Text */
 .overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 36px;
+  /* Increased font size for larger titles */
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 /* Description Text */
 .description {
-    font-size: 18px;
-    color: #333;
-    margin: 20px 0;
-    line-height: 1.5;
+  font-size: 24px;
+  color: #333;
+  margin: 15px 0;
+  line-height: 1.4;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Animation Keyframes */
 @keyframes slideInLeft {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
 
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @keyframes slideInRight {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
 
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
-/* Applying Animations to Sections */
-.section-left {
-    animation: slideInLeft 1s ease forwards;
+/* Adding classes to trigger animation */
+.animate-left {
+  animation: slideInLeft 1s ease forwards;
 }
 
-.section-right {
-    animation: slideInRight 1s ease forwards;
-    animation-delay: 0.5s;
-    /* Delay to stagger animations */
+.animate-right {
+  animation: slideInRight 1s ease forwards;
 }

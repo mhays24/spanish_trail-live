@@ -5,20 +5,35 @@
 <link rel="stylesheet" href="{% static "styles.css" %}" />
 <link rel="stylesheet" href="{% static "ministries.css" %}" />
 
-<section>
-  <!-- Adult Ministry Section -->
+<section class="bottom-padding">
+    <h1 class="ministries-title">Our Ministries</h1>
+  <!-- Sunday Worship Section -->
   <div class="section section-left">
-    <img src="{% static 'images/bible.jpg' %}" alt="Adult Ministry Image" class="section-image">
-    <div class="overlay">Adult Ministry</div>
+    <img src="{% static 'images/sunday-baptist-worship.jpg' %}" alt="Sunday Worship Image" class="section-image">
+    <div class="overlay">Sunday Worhsip</div>
   </div>
-  <p class="description">Adults in fellowship ministering to each other as God directs our paths.</p>
+  <p class="description"><b>Join Us In Worshiping Our God! </b><br> Sunday School starts at 9:30 A.M every Sunday morning with Worship Service at 10:30 A.M. <br>Sunday night Worship service starts at 5:30 P.M.</p>
 
-  <!-- Children's Ministry Section -->
+  <!-- Bible Study Section -->
   <div class="section section-right">
-    <img src="{% static 'images/bible.jpg' %}" alt="Children's Ministry Image" class="section-image">
-    <div class="overlay">Children's Ministry</div>
+    <img src="{% static 'images/bible-study.jpg' %}" alt="Bible Study Image" class="section-image">
+    <div class="overlay">Bible Study</div>
   </div>
-  <p class="description">Children of all ages have a fun safe place to learn about the stories God has given us.</p>
-</section>
+  <p class="description"><b>Studying God's Word</b><br>Join us every Wednesday night starting at 6:00 P.M for our weekly Bible Study.</p>
 
+    <!-- Bible Challenge Secion -->
+    <div class="section section-left">
+        <img src="{% static 'images/bible.jpg' %}" alt="Bible Challenge Image" class="section-image">
+        <div class="overlay">Bible Challenge</div>
+    </div>
+    <p class="description"><b>Children of all ages have a fun safe place to learn about the stories God has given us. </b><br> Bible Challenge (for students in the 1st-12th grade) and Bible Challenge Jr. (for students ages 3 to 5), by Bogard Press are Bible-based programs that are designed to teach students the importance of studying and learning God's Word and hiding it in their hearts. For more information visit <a href="https://bogardpress.org/bible-challenge" target="_blank">https://bogardpress.org/bible-challenge.</a></p>
+
+    <!-- Lady's Auxiliary Section -->
+    <div class="section section-right">
+        <img src="{% static 'images/lady-aux.jpg' %}" alt="Lady's Auxiliary Image" class="section-image">
+        <div class="overlay">Lady's Auxiliary</div>
+    </div>
+    <p class="description"><b>Not Forsaking The Assembling of Ourselves</b><br>Providing women a time and place to dig deep through the scriptures in a comfortable setting among themselves.</p>
+</section>
+<script src="{% static 'ministries.js' %}"></script>
 {% endblock %}
