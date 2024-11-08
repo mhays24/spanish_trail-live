@@ -3,22 +3,92 @@
 {% block title %}Im New - Spanish Trail BC{% endblock %}
 {% block content %}
 <link rel="stylesheet" href="{% static "styles.css" %}" />
-<link rel="stylesheet" href="{% static "im_new.css" %}" />
+<link rel="stylesheet" href="{% static "im_new.css" %}" /> 
 
-<div class="card shadow-lg">
-    <div class="card-body">
-        <div class="construction-icon mb-4">
-            🚧
-        </div>
-        <h1 class="card-title">This Page is Under Construction</h1>
-        <p class="card-text">We are working hard to get this page up and running. Check back soon!</p>
+
+<div class="container my-5 bottom-padding">
+    <h2 class="text-center mb-4 faq-header">Frequently Asked Questions</h2>
+    <div class="accordion rounded-3 shadow-sm" id="faqAccordion">
+    <h3 class="text-center mb-4 faq-subtitle">Please look at our Frequently Asked Questions below and contact us if you have any further questions at <a class="faq-subtitle" href="mailto:spanishtrailbc@gmail.com">spanishtrailbc@gmail.com</a></h3>
         
-        <div class="progress my-4">
-            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar"></div>
+    <!-- FAQ Item 1 -->
+        <div class="accordion-item rounded-3">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    What time does service start?
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Sunday School Starts at 9:30am and Worship Service starts at 10:30am with a 5:30pm evening service. Wednesday night bible study starts at 6:00pm.
+                </div>
+            </div>
         </div>
 
-        <button class="btn btn-primary" onclick="window.history.back()">Go Back</button>
+        <!-- FAQ Item 2 -->
+        <div class="accordion-item rounded-3">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Do you have a nursery?
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Yes, we have a nursery for children ages 0-3 years old.
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="accordion-item rounded-3">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Do you have children Church?
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Yes, we have children church for children ages 4-12 years old.
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="accordion-item rounded-3">
+            <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    What do I wear?
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Some men wear suits with or without ties, some wear business casual, and others wear jeans.  The ladies range from dresses and heels to jeans with tennis shoes or sandles.  Be respectful, but wear what you are comfortable with.
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="accordion-item rounded-3">
+            <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    What do you believe?
+                </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    We believe in the Bible as the inspired Word of God.  We believe in the Trinity, the Father, the Son, and the Holy Spirit.  We believe that Jesus Christ is the Son of God and that He died for our sins and rose again.  We believe that salvation is by grace through faith in Jesus Christ alone. We believe the only way to eternal life is through Jesus Christ. <br> For more information and to see our full doctrinal beliefs, please visit our <a href="{% url 'beliefs' %}">beliefs</a> page.
+                </div>
+            </div>
+        </div>
+
+
+
     </div>
 </div>
 
+
+
+
+
+<script src="{% static 'im_new.js' %}"></script>
 {% endblock %}

@@ -1,0 +1,55 @@
+body {
+    background: url('images/faq-bible-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.faq-header {
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 200px;
+    font-size: 60px;
+    color: #fff;
+}
+
+.faq-subtitle {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.bottom-padding {
+    padding-bottom: 120px;
+}
+
+.accordion-item {
+    border: none;
+    margin-bottom: 1rem;
+}
+
+.accordion-button {
+    background-color: #f8f9fa;
+    color: #333;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-button:hover {
+    background-color: #e9ecef;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.accordion-body {
+    background-color: #ffffff;
+    border-top: 1px solid #dee2e6;
+    transition: max-height 0.3s ease;
+    padding: 1rem 1.25rem;
+}
+
+/* Accordion Animation */
+.accordion-collapse {
+    transition: height 0.4s ease;
+}
