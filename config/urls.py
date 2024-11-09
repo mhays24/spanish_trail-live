@@ -27,4 +27,5 @@ urlpatterns = [
     path("ministries/", views.ministries, name="ministries"),
     path("online_giving/", views.online_giving, name="online_giving"),
     path("staff/", views.staff, name="staff"),
+    path("send_question/", views.send_question, name="send_question"),
 ]

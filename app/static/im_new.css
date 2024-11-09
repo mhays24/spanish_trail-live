@@ -1,55 +1,186 @@
 body {
     background: url('images/faq-bible-background.jpg') no-repeat center center fixed;
     background-size: cover;
+    color: #333;
+    margin-top: 120px; /* Add margin to the top */
 }
 
-.faq-header {
-    font-family: 'Times New Roman', Times, serif;
-    padding-top: 200px;
-    font-size: 60px;
-    color: #fff;
+.faq-font {
+    font-family: 'Times New Roman', Times, serif !important; /* Use a modern font */
 }
 
-.faq-subtitle {
-    font-family: 'Times New Roman', Times, serif;
+.im-new-section {
+    border-radius: 15px;
+    padding: 40px; /* Increased padding */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.95); /* Slightly opaque background */
+}
+
+.faq-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px; /* Increased padding */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px; /* Increased margin */
+    border: none; /* Removed border */
+}
+
+.unanswered-questions {
+    background: rgba(240, 240, 240, 0.9); /* Different background color */
+    border-radius: 15px;
+    padding: 30px; /* Increased padding */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-top: 50px; /* Adjust the value as needed */
+}
+
+.im-new-section .faq-header {
+    font-family: 'Arial', sans-serif; /* Use a modern font */
+    font-size: 48px; /* Reduced font size */
+    color: #2e3192; /* Dark blue color */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    margin: 0; /* Removed margin */
+    padding-top: 10px; /* Adjusted padding */
+    background-color: transparent; /* Removed background color */
+    border-radius: 15px;
+    padding: 20px;
+    border: none; /* Removed border */
+    text-align: center; /* Center align text */
+}
+
+.im-new-section .faq-subtitle {
+    font-family: 'Arial', sans-serif; /* Use a modern font */
     font-size: 24px;
-    color: #fff;
+    color: #555;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     text-decoration: none;
+    background-color: transparent; /* Removed background color */
+    border-radius: 15px;
+    padding: 10px;
+    border: none; /* Removed border */
+    text-align: center; /* Center align text */
 }
 
-.bottom-padding {
-    padding-bottom: 120px;
-}
-
-.accordion-item {
-    border: none;
+.im-new-section .accordion-item {
+    border: none; /* Removed border */
     margin-bottom: 1rem;
+    transition: transform 0.3s ease;
 }
 
-.accordion-button {
+.im-new-section .accordion-item:hover {
+    transform: scale(1.02);
+}
+
+.im-new-section .accordion-button {
     background-color: #f8f9fa;
     color: #333;
     font-weight: 500;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 1rem;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
-.accordion-button:hover {
+.im-new-section .accordion-button:hover {
     background-color: #e9ecef;
 }
 
-.accordion-button:focus {
+.im-new-section .accordion-button::after {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f078'; /* Chevron icon */
+    font-weight: 900;
+    float: right;
+    transition: transform 0.3s ease;
+}
+
+.im-new-section .accordion-button.collapsed::after {
+    transform: rotate(-180deg);
+}
+
+.im-new-section .accordion-button:focus {
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-.accordion-body {
+.im-new-section .accordion-body {
     background-color: #ffffff;
     border-top: 1px solid #dee2e6;
-    transition: max-height 0.3s ease;
-    padding: 1rem 1.25rem;
+    transition: opacity 0.2s ease; /* Reduced transition duration */
+    padding: 1.25rem;
+    border-radius: 0 0 8px 8px;
 }
 
-/* Accordion Animation */
-.accordion-collapse {
-    transition: height 0.4s ease;
+.im-new-section .accordion-collapse {
+    transition: max-height 0.2s ease, opacity 0.2s ease; /* Reduced transition duration */
+}
+
+.im-new-section .accordion-collapse.show {
+    opacity: 1;
+}
+
+.im-new-section .accordion-collapse:not(.show) {
+    opacity: 0;
+}
+
+.btn-primary {
+    background-color: #2e3192; /* Dark blue button color */
+    border-color: #2e3192;
+    padding: 10px 20px; /* Add padding */
+    font-size: 16px; /* Increase font size */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition */
+    width: 100%; /* Make button full width */
+    max-width: 200px; /* Set a max width */
+    margin: 0 auto; /* Center the button */
+    display: block; /* Ensure the button is a block element */
+}
+
+.btn-primary:hover {
+    background-color: #1e2072; /* Darker blue hover color */
+    border-color: #1e2072;
+    transform: scale(1.05); /* Add hover effect */
+}
+
+/* Remove border, padding, and background from email link */
+.faq-subtitle a {
+    border: none;
+    padding: 0;
+    background: none;
+    color: #2e3192; /* Dark blue color */
+    text-decoration: underline;
+}
+
+.faq-subtitle a:hover {
+    color: #1e2072; /* Darker blue hover color */
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+    body {
+        margin-top: 100px; /* Adjust margin for mobile */
+    }
+
+    .im-new-section {
+        padding: 20px; /* Reduce padding */
+    }
+
+    .faq-container, .unanswered-questions {
+        padding: 20px; /* Reduce padding */
+    }
+
+    .im-new-section .faq-header {
+        font-size: 36px; /* Reduce font size */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .im-new-section .faq-subtitle {
+        font-size: 20px; /* Reduce font size */
+        padding: 5px; /* Reduce padding */
+    }
+
+    .btn-primary {
+        font-size: 14px; /* Reduce font size */
+        padding: 8px 16px; /* Reduce padding */
+        max-width: 100%; /* Remove max width */
+    }
 }
