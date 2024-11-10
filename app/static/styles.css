@@ -52,46 +52,90 @@ LIGHT BLUE: #00adef
         /* Smaller button for mobile */
         font-size: 1rem;
     }
+
+    .services .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-small {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .card-img-top {
+        height: auto;
+    }
+
+    .img-small {
+        height: auto;
+    }
+
+    .section-left, .section-right {
+        opacity: 0;
+        transform: translateY(20px); /* Use translateY for mobile view */
+        transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .animate-left, .animate-right {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* End of Hero section */
 
 /* Start of services (ministries) section */
+.services .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
 .card-small {
-    width: 90%;
+    width: 100%;
     margin: 10px auto;
     padding: 0;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Ensure no background color */
+    box-shadow: none; /* Remove any box shadow */
 }
 
 .card {
     border: none;
     padding: 0;
     margin: 0;
+    background-color: transparent; /* Ensure no background color */
+    box-shadow: none; /* Remove any box shadow */
+    height: 100%; /* Ensure card takes full height */
 }
 
 .card-img-top {
     border-radius: 0;
     width: 100%;
-    height: 100%;
+    height: 100%; /* Ensure image takes full height */
     object-fit: cover;
-}
-
-.img-small {
-    height: 250px;
-    object-fit: cover;
-    width: 100%;
     margin: 0;
     padding: 0;
 }
 
+.img-small {
+    height: 100%; /* Ensure image takes full height */
+    object-fit: cover;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none; /* Ensure no border */
+}
+
 /* End of services (ministries) section */
 
-/*start of map */
 .map {
     padding-bottom: 4%;
     padding-top: 4%;
     background-color: #f8f9fa;
 }
-
-/* End of map */

@@ -20,6 +20,7 @@ body {
   font-size: 60pt;
   padding-top: 245px;
   font-weight: 500;
+  color: #fff;
 }
 
 /* Section Container */
@@ -62,12 +63,36 @@ body {
 /* Description Text */
 .description {
   font-size: 24px;
-  color: #333;
+  color: #ffffff;
   margin: 15px 0;
   line-height: 1.4;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Added black shadow */
+}
+
+/* Adding classes to trigger animation */
+.section-left {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.section-right {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.animate-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-right {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Animation Keyframes */
@@ -95,11 +120,45 @@ body {
   }
 }
 
-/* Adding classes to trigger animation */
-.animate-left {
-  animation: slideInLeft 1s ease forwards;
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .ministries-title {
+    font-size: 40pt;
+    padding-top: 150px;
+  }
+
+  .section {
+    height: 250px;
+    margin: 20px auto;
+  }
+
+  .overlay {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 18px;
+    padding: 0 10px;
+  }
 }
 
-.animate-right {
-  animation: slideInRight 1s ease forwards;
+@media (max-width: 480px) {
+  .ministries-title {
+    font-size: 30pt;
+    padding-top: 100px;
+  }
+
+  .section {
+    height: 200px;
+    margin: 15px auto;
+  }
+
+  .overlay {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 16px;
+    padding: 0 5px;
+  }
 }
