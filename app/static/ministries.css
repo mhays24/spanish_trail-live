@@ -29,15 +29,10 @@ body {
   width: 95%;
   max-width: 1200px;
   height: 350px;
-  /* Increased height for a taller rectangle */
   margin: 30px auto;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  /* Initially hidden for animation */
-  transform: translateX(0);
-  /* Reset any transformations */
 }
 
 /* Section Image */
@@ -72,52 +67,26 @@ body {
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Added black shadow */
 }
 
-/* Adding classes to trigger animation */
-.section-left {
+.slide-left {
   opacity: 0;
   transform: translateX(-100%);
-  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-.section-right {
+.slide-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-right {
   opacity: 0;
   transform: translateX(100%);
-  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-.animate-left {
+.slide-right.visible {
   opacity: 1;
   transform: translateX(0);
-}
-
-.animate-right {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* Animation Keyframes */
-@keyframes slideInLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideInRight {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
 }
 
 /* Media Queries for Mobile Responsiveness */
@@ -139,6 +108,10 @@ body {
   .description {
     font-size: 18px;
     padding: 0 10px;
+  }
+
+  .slide-left {
+    transform: translateX(-50%);
   }
 }
 
