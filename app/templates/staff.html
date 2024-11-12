@@ -4,34 +4,41 @@
 {% block content %}
 <link rel="stylesheet" href="{% static "staff.css" %}" />
 
-<div class="container padding">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>Staff</h1>
-            <p>Our staff is here to serve you. If you have any questions, please feel free to contact us.</p>
+<div class="staff-container">
+    <h1 class="staff-title">STAFF</h1>
+    <div class="staff-grid">
+        <!-- Staff Member 1 -->
+        <div class="staff-card">
+            <h2 class="staff-role">Pastor</h2>
+            <img src="{% static 'images/church_edited.jpg' %}" alt="Pastor" class="staff-image">
+            <p class="staff-description">Bro. Chris Webb</p>
+            {% comment %} <p class="staff-status">Open</p> {% endcomment %}
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-4">
-            <img src="{% static "images/cross.jpg" %}" alt="Pastor" class="img-thumbnail">
-            <h2>Pastor</h2>
-            <p>Our pastor is here to serve you. If you have any questions, please feel free to contact him.</p>
+        <!-- Staff Member 2 -->
+        <div class="staff-card">
+            <h2 class="staff-role">Pianist</h2>
+            {% comment %} <img src="{% static 'images/church_edited.jpg' %}" alt="Pianist" class="staff-image"> {% endcomment %}
+            {% comment %} <p class="staff-description">name</p> {% endcomment %}
+            <p class="staff-status">Open</p>
         </div>
-        <div class="col-md-4">
-            <img src="{% static "images/cross.jpg" %}" alt="Secretary" class="img-thumbnail">
-            <h2>Secretary</h2>
-            <p>Our secretary is here to serve you. If you have any questions, please feel free to contact her.</p>
+        <!-- Staff Member 3 -->
+        <div class="staff-card">
+            <h2 class="staff-role">Song Leader</h2>
+            {% comment %} <img src="{% static 'images/church_edited.jpg' %}" alt="Song Leader" class="staff-image"> {% endcomment %}
+            {% comment %} <p class="staff-description">name</p> {% endcomment %}
+            <p class="staff-status">Open</p>
         </div>
-        <div class="col-md-4">
-            <img src="{% static "images/cross.jpg" %}" alt="Usher" class="img-thumbnail">
-            <h2>Usher</h2>
-            <p>Our usher is here to serve you. If you have any questions, please feel free to contact him.</p>
+        <!-- Staff Member 4 -->
+        <div class="staff-card">
+            <h2 class="staff-role">Treasure</h2>
+            {% comment %} <img src="{% static 'images/church_edited.jpg' %}" alt="Treasure" class="staff-image"> {% endcomment %}
+            {% comment %} <p class="staff-description">name</p> {% endcomment %}
+            <p class="staff-status">Open</p>
         </div>
+        <!-- Staff Member 5 -->
+
     </div>
 </div>
 
-
-
-
-    <script src="{% static 'staff.js' %}"></script>
+<script src="{% static 'staff.js' %}"></script>
 {% endblock %}
