@@ -2,7 +2,6 @@ body {
     background-color: rgb(0, 173, 239);
 }
 
-/* Navbar and announcement */
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
@@ -34,7 +33,29 @@ footer {
     color: #adb5bd;
 }
 
-/* Shrink logos on smaller screens */
+.hover-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.hover-underline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
 @media (max-width: 768px) {
     .nav-logo {
         height: 40pt;
@@ -53,6 +74,7 @@ footer {
         text-align: center;
         width: 100%;
     }
+
     .navbar-nav .nav-link {
         display: block;
     }
