@@ -48,4 +48,12 @@ footer {
     .navbar {
         padding-bottom: 0;
     }
+
+    .navbar-nav {
+        text-align: center;
+        width: 100%;
+    }
+    .navbar-nav .nav-link {
+        display: block;
+    }
 }
