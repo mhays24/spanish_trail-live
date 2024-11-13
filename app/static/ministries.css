@@ -9,6 +9,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   text-align: center;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .bottom-padding {
