@@ -56,6 +56,14 @@ footer {
     transform-origin: bottom left;
 }
 
+header {
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    z-index: 1040; /* Ensure header is above other elements */
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
 @media (max-width: 768px) {
     .nav-logo {
         height: 40pt;
