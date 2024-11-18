@@ -36,11 +36,11 @@ def send_question(request):
         message = request.POST.get("message")
         
         # Construct the email message
-        full_message = f"Name: {name}\nEmil: {email}\n\nMessage:\n{message}"
+        full_message = f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}"
         
         # Send email
         send_mail(
-            subject=f" Question from Question from {name}",
+            subject=f" Question from {name}",
             message=full_message,
             from_email=settings.DEFAULT_FROM_EMAIL,
             recipient_list=[settings.DEFAULT_FROM_EMAIL],
