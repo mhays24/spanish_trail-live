@@ -36,7 +36,7 @@ def send_question(request):
         message = request.POST.get("message")
         
         # Construct the email message
-        full_message = f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}"
+        full_message = f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}\n\n---\nPlease do not reply back to this email."
         
         # Send email
         send_mail(

@@ -127,7 +127,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'spanishtrailbc@gmail.com'  # the email used to send the messages
 EMAIL_HOST_PASSWORD = 'flvn vkpj afwu qshn'  # App-specific password
-DEFAULT_FROM_EMAIL = 'spanishtrailbc@gmail.com' # the email messages sent to
+DEFAULT_FROM_EMAIL = 'stbc@spanishtrailbc.com' # the email messages sent to
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
